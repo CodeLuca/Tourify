@@ -6,9 +6,9 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MyActivity"
+    tools:context="me.lucaspeedstack.tourify.MyActivity2"
     android:background="#ff29ccae"
-    android:id="@+id/layout1"
+    android:id="@+id/layout2"
     android:clickable="false">
 
 
@@ -16,35 +16,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:src="@drawable/feelinglucky"
-        android:layout_marginBottom="60dp"
+        android:src="@drawable/start"
+        android:layout_marginBottom="36dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
-        android:src="@drawable/customtour"
-        android:layout_above="@+id/imageButton"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView"
-        android:src="@drawable/tourify"
-        android:layout_alignParentTop="true"
+        android:src="@drawable/location"
+        android:layout_above="@+id/placename"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:src="@drawable/yrs"
-        android:layout_above="@+id/imageButton2"
+        android:src="@drawable/tourify"
+        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/imageView"
         android:layout_alignStart="@+id/imageView" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="Loading... Please Move Your Phone Around."
+        android:id="@+id/placename"
+        android:textIsSelectable="false"
+        android:textSize="40dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:typeface="sans" />
 
 </RelativeLayout>
