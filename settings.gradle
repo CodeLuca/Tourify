@@ -1,1 +1,2 @@
-include ':app'
+include ':app', ':example', ':library'
+include 'library.gdapi'

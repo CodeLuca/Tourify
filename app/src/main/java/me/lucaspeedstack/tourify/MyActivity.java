@@ -31,5 +31,13 @@ public class MyActivity extends ActionBarActivity {
             }
         });
 
+        button2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                startActivity(new Intent(getApplicationContext(), MyActivity3.class));
+
+            }
+        });
+
     }
 }
