@@ -6,6 +6,8 @@ import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -27,6 +29,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+import static me.lucaspeedstack.tourify.R.anim.abc_fade_in;
 import static me.lucaspeedstack.tourify.R.drawable.*;
 
 public class MyActivity4 extends ActionBarActivity {
@@ -48,6 +51,7 @@ public class MyActivity4 extends ActionBarActivity {
     String one;
     String two;
 
+
     public static ArrayList<LatLng> sPoints = new ArrayList<LatLng>();
 
     int max;
@@ -63,7 +67,7 @@ public class MyActivity4 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_activity4);
-
+        final Animation animationFadeIn = AnimationUtils.loadAnimation(this, R.anim.fade_out);
         uno = (TextView) findViewById(R.id.uno);
         view = (ImageView) findViewById(R.id.imageView);
         rating = (TextView) findViewById(R.id.textView);
@@ -74,7 +78,7 @@ public class MyActivity4 extends ActionBarActivity {
         white = (ImageView) findViewById(R.id.awf);
         where = (TextView) findViewById(R.id.textView2);
 
-        white.setAlpha(.4f);
+        white.setAlpha(.5f);
 
         final JSONObject ret = giveInfo(MyActivity2.lat, MyActivity2.lng, MyActivity2.text);
         JSONObject location;
@@ -99,9 +103,7 @@ public class MyActivity4 extends ActionBarActivity {
             two = location.getString("vicinity");
             rating.setText(one);
             where.setText(two);
-            lat1 = location.getDouble("lat");
-            lon1 = location.getDouble("lon");
-            latLngone = new LatLng(lat1, lon1);
+            sPoints.add(latLngone);
             UrlImageViewHelper.setUrlDrawable(view, sv, ok);
             done = true;
         } catch (JSONException e1) {
@@ -135,10 +137,9 @@ public class MyActivity4 extends ActionBarActivity {
                     where.setText(location2.getString("vicinity"));
                     uno.setText(name2);
                     sv2 = location2.getString("image");
-                    lat2 = location2.getDouble("lat");
-                    lon2 = location2.getDouble("lon");
-                    latLngtwo = new LatLng(lat2, lon2);
+                    sPoints.add(latLngtwo);
                     UrlImageViewHelper.setUrlDrawable(view, sv2, ok);
+                    overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
                     slide++;
 
                 } catch (JSONException e) {

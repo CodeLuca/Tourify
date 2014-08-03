@@ -26,7 +26,8 @@ public class MyActivity extends ActionBarActivity {
         button1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                startActivity(new Intent(getApplicationContext(), MyActivity2.class));
+                startActivity(new Intent(getApplicationContext(), MyActivity2   .class));
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
 
             }
         });
@@ -35,7 +36,7 @@ public class MyActivity extends ActionBarActivity {
             @Override
             public void onClick(View view){
                 startActivity(new Intent(getApplicationContext(), MyActivity3.class));
-
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
             }
         });
 

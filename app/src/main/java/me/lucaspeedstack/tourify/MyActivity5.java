@@ -14,9 +14,6 @@ public class MyActivity5 extends ActionBarActivity {
 
     public static MapFragment myMap;
 
-    LatLng fromPosition = new LatLng(13.687140112679154, 100.53525868803263);
-    LatLng toPosition = new LatLng(13.683660045847258, 100.53900808095932);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +21,7 @@ public class MyActivity5 extends ActionBarActivity {
         setContentView(R.layout.activity_my_activity5);
         GoogleMap myMap = ((MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map)).getMap();
+
 
         LatLng one = new LatLng(-33.867, 151.203);
         LatLng two = new LatLng(-33.867, 151.201);

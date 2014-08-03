@@ -61,6 +61,7 @@ public class MyActivity2 extends ActionBarActivity implements LocationListener{
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), MyActivity4.class));
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
             }
         });
 
