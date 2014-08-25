@@ -23,9 +23,9 @@ public class MyActivity5 extends ActionBarActivity {
                 .findFragmentById(R.id.map)).getMap();
 
 
-        LatLng one = new LatLng(-33.867, 151.203);
-        LatLng two = new LatLng(-33.867, 151.201);
-        LatLng three = new LatLng(-33.867, 151.209);
+        LatLng one = new LatLng(50.3710, -4.1402);
+        LatLng two = new LatLng(50.3718, -4.1420);
+        LatLng three = new LatLng(50.3714, -4.1427);
         myMap.addMarker(new MarkerOptions()
                 .position(one));
         myMap.addMarker(new MarkerOptions()
@@ -38,15 +38,15 @@ public class MyActivity5 extends ActionBarActivity {
         myMap.setMyLocationEnabled(true);
         myMap.moveCamera(CameraUpdateFactory.newLatLngZoom(one, 13));
         if (MyActivity4.nor > 3) {
-            four = new LatLng(-33.862, 151.206);
+            four = new LatLng(50.3782, -4.1439);
             myMap.addMarker(new MarkerOptions()
                     .position(four));
             if (MyActivity4.nor > 4) {
-                five = new LatLng(-33.869, 151.206);
+                five = new LatLng(50.3704, -4.1423);
                 myMap.addMarker(new MarkerOptions()
                         .position(five));
                 if (MyActivity4.nor > 5) {
-                    six = new LatLng(-33.865, 151.206);
+                    six = new LatLng(50.3765, -4.145);
                     myMap.addMarker(new MarkerOptions()
                             .position(six));
                 }

@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageButton"
-        android:src="@drawable/suprisemev2"
+        android:src="@drawable/surprise"
         android:layout_marginBottom="60dp"
         android:background="@null"
         android:layout_alignParentBottom="true"
